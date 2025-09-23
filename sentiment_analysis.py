@@ -1,5 +1,5 @@
 # sentiment_analysis.py
-# IMDB Sentiment Analysis: Positive, Negative, Neutral
+# Movie Review Sentiment Analysis: Positive, Negative, Neutral
 # Features:
 # - TF-IDF vectorization (unigrams + bigrams)
 # - Logistic Regression
@@ -200,7 +200,7 @@ def launch_gradio():
         fn=gr_predict,
         inputs="text",
         outputs=["text","text","plot"],
-        title="IMDB Sentiment Classifier (Positive/Negative/Neutral)",
+        title="Movie Review Sentiment Analysis",
         description="Type a review and see predicted sentiment, top contributing words, and visual sentiment percentages.",
         allow_flagging='never'
     )

@@ -1,5 +1,5 @@
 # app.py
-# Gradio app for IMDB Sentiment demo (bar chart)
+# Gradio app for Movie Review Sentiment Analysis demo (bar chart)
 import os, re
 import joblib
 import nltk
@@ -70,7 +70,6 @@ if os.path.exists(MODEL_FILE) and os.path.exists(VECT_FILE):
 
 # Fallback trainer (only used if no saved models)
 def train_fallback(sample_size=8000):
-    # Note: requires `datasets` package in requirements.txt
     from datasets import load_dataset
     ds = load_dataset("imdb")
     df_train = pd.DataFrame({"review": ds["train"]["text"], "label": ds["train"]["label"]})
@@ -162,10 +161,10 @@ def gr_predict(text):
     label = info["label"].capitalize()
     words = ", ".join([f"{w}({round(c,3)})" for w, c in info["top_words"]]) if info["top_words"] else "N/A"
     probstr = info["prob_str"]
-    fig = make_bar_fig(info["probabilities"])
+    fig = make_bar_fig(info["percentages"])
     return f"Predicted Sentiment: {label} | {probstr}", f"Top contributing words: {words}", fig
 
-title = "IMDB Sentiment Classifier (Demo)"
+title = "Movie Review Sentiment Analysis"
 desc = (
     "Type a movie review and see predicted sentiment (Positive/Negative/Neutral). "
     "Uses Logistic Regression (TF-IDF) + VADER for neutral detection. Top contributing words shown."
