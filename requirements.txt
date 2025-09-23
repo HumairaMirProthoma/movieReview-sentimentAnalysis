@@ -1,0 +1,10 @@
+gradio
+pandas
+numpy
+scikit-learn
+nltk
+joblib
+wordcloud
+matplotlib
+seaborn
+datasets

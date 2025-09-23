@@ -1,0 +1,10 @@
+# Ignore local-only stuff
+.gradio/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# Ignore dataset (optional if too large)
+Data/
