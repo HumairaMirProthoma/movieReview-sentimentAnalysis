@@ -1,3 +1,14 @@
+---
+title: Movie Review Sentiment Analysis
+emoji: 🎬
+colorFrom: blue
+colorTo: green
+sdk: gradio
+sdk_version: "3.41.0"
+app_file: app.py
+pinned: false
+---
+
 # Movie Review Sentiment Analysis
 
 **An interactive Gradio demo that predicts the sentiment of movie reviews (Positive, Negative, Neutral) using Logistic Regression (TF-IDF) and VADER heuristic for neutral detection.**
@@ -29,27 +40,4 @@ This project demonstrates how to combine **machine learning models** with **heur
 4. Predict sentiment with probability scores for positive, negative, and neutral.
 5. Show top contributing words to aid explainability.
 6. Visualize sentiment distribution as a bar chart in the Gradio interface.
-7. Easy-to-run local demo and Hugging Face deployment.
-
-## My Contributions
-
-- **Data Processing:** Cleaned and preprocessed the IMDB dataset, removed stopwords, and normalized text.
-- **Model Training:** Trained logistic regression classifiers with TF-IDF vectors and evaluated performance.
-- **Explainability:** Implemented feature contribution analysis to highlight important words influencing predictions.
-- **Gradio Interface:** Built an interactive demo to visualize predictions, probabilities, and top words.
-- **Hugging Face Deployment:** Deployed the demo online for public access.
-
-## Limitations
-
-- **Neutral Detection:** IMDB dataset contains only positive/negative labels. Neutral reviews are detected using heuristics (VADER compound score + low-confidence threshold).
-- **Binary Model:** The logistic regression model is trained for binary classification (positive/negative). For **true 3-class training**, additional neutral-labeled data is required.
-- **Dataset Bias:** The IMDB dataset is specific to movie reviews, so generalization to other domains may require retraining or fine-tuning.
-
-## How to Run Locally
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/HumairaMirProthoma/movieReview-sentimentAnalysis.git
-cd movieReview-sentimentAnalysis
-```
+7. Easy-to-run local demo and Hugging Face deploy
