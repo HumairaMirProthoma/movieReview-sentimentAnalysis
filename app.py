@@ -270,7 +270,7 @@ def predict_review(text: str):
 
 # ----------------- Gradio UI -----------------
 title = "Movie Review Sentiment Analysis"
-description = "Transformer-based sentiment prediction (positive/negative)."
+description = "Transformer-based sentiment prediction (positive/negative/neutral)."
 
 iface = gr.Interface(
     fn=predict_review,
