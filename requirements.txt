@@ -1,10 +1,11 @@
-gradio
+gradio>=3.0
+transformers>=4.30.0
+torch      # CPU or GPU variant; Hugging Face Space provides CPU by default
 pandas
 numpy
 scikit-learn
-nltk
 joblib
-wordcloud
+nltk
 matplotlib
 seaborn
-datasets
+wordcloud
