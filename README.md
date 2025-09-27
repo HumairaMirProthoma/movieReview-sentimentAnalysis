@@ -113,6 +113,6 @@ http://127.0.0.1:7860
 ## Demo
 
 Try it live on **Hugging Face Spaces**:
-👉 [Movie Review Sentiment Analysis](https://huggingface.co/spaces/)
+👉 [Movie Review Sentiment Analysis](https://huggingface.co/spaces/HumairaProthoma/movieReview-sentimentAnalysis)
 
 ---
